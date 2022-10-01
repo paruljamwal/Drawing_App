@@ -1,0 +1,150 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: paleturquoise;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    max-width: 1050px;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+section{
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.tool_board{
+ width:210px;
+ padding: 15px 22px 0;
+}
+
+.tool_board .row{
+    margin-bottom: 20px;
+}
+
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+
+.row .options .option{
+    display: flex ;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+.option :where(span, label){
+color: #5A6168;
+padding-left: 10px;
+}
+
+.option #fill-color{
+    height: 14px;
+    width: 14px;
+}
+
+.option #slider{
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option{
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.colors .option:nth-child(1){
+    background-color: white;
+    border: 1px solid rgb(133, 131, 131);
+}
+
+.colors .option:nth-child(2){
+    background-color: black;
+}
+
+
+.colors .option:nth-child(3){
+    background-color: red ;
+}
+
+.colors .option:nth-child(4){
+    background-color: green;
+}
+
+
+.colors .option:nth-child(5){
+    background-color: blue ;
+}
+
+.colors .option:first-child.selected::before{
+    border-color: #ccc;
+}
+
+.option #color-pick{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons button{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+
+.buttons .clear{
+    color: gray ;
+    font-weight: bold;
+    border: 1px solid gray;
+}
+
+
+.buttons .save{
+    color: skyblue;
+    border: 1px solid rgb(9, 169, 232);
+    font-weight: bold;
+}
+
+
+.drawing_board{
+    flex:1;
+}
+
+.drawing_board canvas{
+    width: 100%;
+    height: 100%;
+}
